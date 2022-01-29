@@ -14,7 +14,11 @@ class MovieFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => $this->faker->catchPhrase,
+            'duration' => $this->faker->numberBetween(70, 150),
+            'rating' => $this->faker->numberBetween(1, 10),
+            'description' => $this->faker->realText,
+            'release_year' => $this->faker->numberBetween(1950, 2021),
         ];
     }
 }
