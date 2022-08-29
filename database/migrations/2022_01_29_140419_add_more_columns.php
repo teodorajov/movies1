@@ -27,7 +27,8 @@ class AddMoreColumns extends Migration
     public function down()
     {
         Schema::table('movies', function (Blueprint $table) {
-            //
+            $table->removeColumn('description');
+            $table->removeColumn('release_year');
         });
     }
 }
